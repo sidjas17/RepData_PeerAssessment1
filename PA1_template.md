@@ -26,7 +26,7 @@ library(ggplot2)
 qplot(steps1,xlab = "Number of steps taken each day.",ylab = "Total Frequency",binwidth = 500)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![plot of chunk unnamed-chunk-2](figures/unnamed-chunk-2-1.png)<!-- -->
 
 Mean and median of total number of steps taken each day.
 
@@ -59,7 +59,7 @@ average <- tapply(data$steps,data$interval,mean,na.rm = TRUE)
 plot(names(average),average ,xlab = "5-min interval",type = "l",ylab = "Average number of Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![plot of chunk unnamed-chunk-4](figures/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 maxavg <- max(average)
@@ -80,7 +80,7 @@ stepseachday<- tapply(imputedata$steps, imputedata$date, sum, na.rm=TRUE)
 qplot(stepseachday, xlab="No. of Steps Taken Each Day", ylab="Total Frequency", binwidth=500)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![plot of chunk unnamed-chunk-5](figure-htmlunnamed-chunk-5-1.png)<!-- -->
 
 ```r
 #Calculating mean and median.
@@ -108,7 +108,7 @@ aggregatedata <- aggregate(steps~interval+ dayType,data=imputedata,mean)
 ggplot(aggregatedata,aes(interval,steps)) + geom_line()+ facet_grid(dayType ~ .)  + xlab("5-minute interval") +ylab("Average Number Of Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![plot of chunk unnamed-chunk-6](figures/unnamed-chunk-6-1.png)<!-- -->
 
 
 
