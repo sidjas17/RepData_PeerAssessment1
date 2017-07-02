@@ -80,7 +80,7 @@ stepseachday<- tapply(imputedata$steps, imputedata$date, sum, na.rm=TRUE)
 qplot(stepseachday, xlab="No. of Steps Taken Each Day", ylab="Total Frequency", binwidth=500)
 ```
 
-![plot of chunk unnamed-chunk-5](figure-htmlunnamed-chunk-5-1.png)<!-- -->
+![plot of chunk unnamed-chunk-5](figures/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
 #Calculating mean and median.
